@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CV Page - Luis Sánchez</title>
+<!-- Google Fonts: Space Grotesk and Noto Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for clean mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white overflow-x-hidden min-h-screen relative pb-24">
+<!-- Sticky Top Navigation with iOS Blur Effect -->
+<nav class="sticky top-0 z-50 w-full backdrop-blur-xl bg-white/70 dark:bg-[#101622]/80 border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+<div class="flex items-center justify-between px-4 py-3 max-w-md mx-auto">
+<button id="back-button" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">arrow_back</span>
+</button>
+<h1 class="text-base font-bold tracking-tight opacity-90 truncate">Luis Sánchez</h1>
+<button id="share-button" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-primary">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Container -->
+<main class="max-w-md mx-auto w-full flex flex-col gap-6 px-4 pt-6">
+<!-- Profile Header -->
+<section class="flex flex-col items-center gap-5">
+<div class="relative group">
+<!-- Glow effect -->
+<div class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-full opacity-30 blur group-hover:opacity-50 transition duration-500"></div>
+<!-- Avatar -->
+<div class="relative w-28 h-28 rounded-full overflow-hidden border-4 border-white dark:border-[#1c2433] bg-slate-200 dark:bg-slate-800" data-alt="Professional portrait of Luis Sanchez smiling" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDtQUt8zDWUNOKpgNGa0W_7mJh77weHlVfWm0MhifsZ08lh_ioeo4Rvjwzxc1L9nksibUtmrN3KZ9YxgU3r0WfyzI0JenLqigZKwjfDbw-_aZJbQ0V9DWu99N19J_v4sgS30cjcnxWiND0h1AQejIFKXXqq_xUlVS45eI3XBholLqObWTPc-y3f_R4kPgstnjTZB32q27hRJL-KFGiOnVKmpWYk4rClLhRxMlNBd2IKJFrrsUujXuR3bqja4TJC2ic0L7Qg0QKzZMMA'); background-size: cover; background-position: center;">
+</div>
+<div class="absolute bottom-1 right-1 w-6 h-6 bg-green-500 border-4 border-white dark:border-[#101622] rounded-full" title="Available for work"></div>
+</div>
+<div class="text-center space-y-1">
+<h2 class="text-3xl font-bold tracking-tight">Luis Sánchez</h2>
+<p class="text-primary font-medium text-lg">Senior Full Stack Developer</p>
+<div class="flex items-center justify-center gap-1 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+<span>Madrid, Spain</span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="flex items-center justify-center gap-3 w-full">
+<button id="email-button" class="flex-1 h-12 bg-slate-200 dark:bg-[#1c2433] hover:bg-slate-300 dark:hover:bg-[#252e40] text-slate-900 dark:text-white rounded-xl flex items-center justify-center gap-2 font-bold text-sm transition-colors">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+                    Email
+                </button>
+<button id="linkedin-button" class="flex-1 h-12 bg-primary hover:bg-blue-600 text-white rounded-xl flex items-center justify-center gap-2 font-bold text-sm transition-colors shadow-lg shadow-blue-500/20">
+<span class="material-symbols-outlined text-[20px]">add_link</span> <!-- Using add_link as proxy for LinkedIn logo in material icons -->
+                    LinkedIn
+                </button>
+<button id="github-button" class="h-12 w-12 bg-slate-200 dark:bg-[#1c2433] hover:bg-slate-300 dark:hover:bg-[#252e40] text-slate-900 dark:text-white rounded-xl flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">code</span> <!-- Proxy for Github -->
+</button>
+<button id="download-button" class="h-12 w-12 bg-slate-200 dark:bg-[#1c2433] hover:bg-slate-300 dark:hover:bg-[#252e40] text-slate-900 dark:text-white rounded-xl flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</section>
+<!-- Divider -->
+<div class="h-px w-full bg-slate-200 dark:bg-slate-800"></div>
+<!-- About Me Section -->
+<section>
+<h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">person</span>
+                About Me
+            </h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed text-base">
+                Passionate developer with over 7 years of experience in building scalable web applications. Expert in React, Python, and cloud architecture. I thrive in collaborative environments and love solving complex algorithmic problems.
+            </p>
+</section>
+<!-- Skills Section -->
+<section>
+<h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span>
+                Skills
+            </h3>
+<div class="flex flex-wrap gap-2">
+<!-- Skill Chips -->
+<div class="bg-primary/10 border border-primary/20 text-primary px-3 py-1.5 rounded-lg text-sm font-semibold">React</div>
+<div class="bg-primary/10 border border-primary/20 text-primary px-3 py-1.5 rounded-lg text-sm font-semibold">TypeScript</div>
+<div class="bg-primary/10 border border-primary/20 text-primary px-3 py-1.5 rounded-lg text-sm font-semibold">Node.js</div>
+<div class="bg-primary/10 border border-primary/20 text-primary px-3 py-1.5 rounded-lg text-sm font-semibold">Python</div>
+<div class="bg-slate-200 dark:bg-[#1c2433] text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm font-medium">AWS</div>
+<div class="bg-slate-200 dark:bg-[#1c2433] text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm font-medium">Docker</div>
+<div class="bg-slate-200 dark:bg-[#1c2433] text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm font-medium">PostgreSQL</div>
+<div class="bg-slate-200 dark:bg-[#1c2433] text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm font-medium">GraphQL</div>
+<div class="bg-slate-200 dark:bg-[#1c2433] text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm font-medium">Tailwind CSS</div>
+<div class="bg-slate-200 dark:bg-[#1c2433] text-slate-700 dark:text-slate-300 px-3 py-1.5 rounded-lg text-sm font-medium">Figma</div>
+</div>
+</section>
+<!-- Experience Timeline Section -->
+<section>
+<h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">work_history</span>
+                Experience
+            </h3>
+<div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-3 space-y-8 pl-6 pb-2">
+<!-- Job 1 -->
+<div class="relative">
+<span class="absolute -left-[31px] top-1 h-4 w-4 rounded-full border-2 border-white dark:border-[#101622] bg-primary ring-4 ring-primary/20"></span>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Senior Full Stack Developer</h4>
+<span class="text-sm font-medium text-primary bg-primary/10 px-2 py-0.5 rounded w-fit mt-1 sm:mt-0">2021 - Present</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 font-medium text-sm mb-2">TechFlow Solutions • Madrid</p>
+<ul class="list-disc list-outside ml-4 text-slate-600 dark:text-slate-300 text-sm space-y-1">
+<li>Led a team of 5 developers in rebuilding the core legacy platform using Next.js.</li>
+<li>Reduced server costs by 40% through serverless architecture migration on AWS.</li>
+<li>Implemented CI/CD pipelines reducing deployment time from 1 hour to 10 minutes.</li>
+</ul>
+</div>
+<!-- Job 2 -->
+<div class="relative">
+<span class="absolute -left-[31px] top-1 h-4 w-4 rounded-full border-2 border-white dark:border-[#101622] bg-slate-400 dark:bg-slate-600"></span>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Software Engineer</h4>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded w-fit mt-1 sm:mt-0">2018 - 2021</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 font-medium text-sm mb-2">Innovatech Corp • Barcelona</p>
+<ul class="list-disc list-outside ml-4 text-slate-600 dark:text-slate-300 text-sm space-y-1">
+<li>Developed high-performance REST APIs using Python and Django.</li>
+<li>Collaborated with UX/UI designers to implement responsive frontend interfaces.</li>
+</ul>
+</div>
+<!-- Job 3 -->
+<div class="relative">
+<span class="absolute -left-[31px] top-1 h-4 w-4 rounded-full border-2 border-white dark:border-[#101622] bg-slate-400 dark:bg-slate-600"></span>
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Junior Developer</h4>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-slate-800 px-2 py-0.5 rounded w-fit mt-1 sm:mt-0">2016 - 2018</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 font-medium text-sm mb-2">StartUp Inc • Remote</p>
+<p class="text-slate-600 dark:text-slate-300 text-sm">
+                        Assisted in the development of a mobile-first e-commerce platform using React Native.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Education & Certs Grid -->
+<div class="grid grid-cols-1 gap-6">
+<!-- Education -->
+<section class="bg-white dark:bg-[#1c2433] rounded-xl p-5 border border-slate-200 dark:border-slate-800/50 shadow-sm">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">school</span>
+                    Education
+                </h3>
+<div class="space-y-4">
+<div class="flex gap-3">
+<div class="mt-1 bg-primary/10 text-primary rounded p-1 h-fit">
+<span class="material-symbols-outlined text-[20px] block">workspace_premium</span>
+</div>
+<div>
+<h4 class="font-bold text-base">BS Computer Science</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Polytechnic University of Madrid</p>
+<p class="text-xs text-slate-400 dark:text-slate-500 mt-1">2012 - 2016</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="bg-white dark:bg-[#1c2433] rounded-xl p-5 border border-slate-200 dark:border-slate-800/50 shadow-sm">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified</span>
+                    Certifications
+                </h3>
+<ul class="space-y-3">
+<li class="flex items-center justify-between text-sm">
+<span class="font-medium">AWS Certified Solutions Architect</span>
+<span class="text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">2022</span>
+</li>
+<li class="flex items-center justify-between text-sm">
+<span class="font-medium">Meta Front-End Developer</span>
+<span class="text-slate-500 text-xs bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded">2021</span>
+</li>
+</ul>
+</section>
+</div>
+</main>
+<!-- Floating Action Button (Download CV) -->
+<div class="fixed bottom-6 right-6 z-40">
+<button class="group flex items-center justify-center w-14 h-14 bg-primary text-white rounded-full shadow-lg shadow-blue-600/40 hover:scale-105 active:scale-95 transition-all duration-200">
+<span class="material-symbols-outlined text-[28px] group-hover:animate-bounce">download</span>
+</button>
+</div>
+<!-- Bottom padding for scroll -->
+<div class="h-8"></div>
+</body></html>
+
+<script>
+    // Button functionalities
+    document.getElementById('back-button').addEventListener('click', () => {
+        window.location.href = 'HomePage.html';
+    });
+
+    document.getElementById('share-button').addEventListener('click', async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'CV de Luis Sánchez',
+                    text: 'Echa un vistazo al CV de Luis Sánchez.',
+                    url: window.location.href
+                });
+            } catch (error) {
+                console.error('Error sharing:', error);
+            }
+        } else {
+            alert('La función de compartir no es compatible con este navegador.');
+        }
+    });
+
+    document.getElementById('email-button').addEventListener('click', () => {
+        // Abre una ventana de Gmail para componer un correo en una nueva pestaña
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&to=luiszenzo2@gmail.com', '_blank');
+    });
+
+    document.getElementById('linkedin-button').addEventListener('click', () => {
+        window.open('https://www.linkedin.com/in/luissanchez-dev', '_blank');
+    });
+
+    document.getElementById('github-button').addEventListener('click', () => {
+        window.open('https://github.com/Luiszenzo', '_blank');
+    });
+
+    document.getElementById('download-button').addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = 'Luis_Sanchez_CV.pdf'; // Asegúrate de tener este archivo en la misma carpeta
+        link.download = 'Luis_Sanchez_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+</script>
+
+</body>
+</html>
